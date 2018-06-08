@@ -1,0 +1,72 @@
+.body{font-family: "DIN Condensed Bold", "DIN Alternate Bold","didot"}
+#sec-intropost{
+    background-image: url(../img/tv_camera_man_studio_show_record_1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	text-align: center;
+	
+}
+.bg-intropost{
+	padding: 100px 0;
+	min-height: 500px;
+	background-color: rgba(80,7,106,0.73)
+}
+.btn-universal{background-color:#A70CDA;border-color: #8800BE;}
+.btn-universal:hover{text-decoration: none;background-color: #9D01E5;}
+#sec-intropost h1{
+	color: #FFFFFF;
+	font-size: 45px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#sec-intropost a{
+	color: #000000;
+	font-size: 17px;	
+}
+.btn-universal,
+.btn-universal:hover{
+	background-color: #FFFFFF;
+	margin-top: 30px;
+}
+
+#sec-menu {
+	text-align: center;
+	color: #2A2A2A;
+}	
+#nav{text-align: center;}
+#sec-bajo{color: #FFFFFF;font-weight: 600;}
+#TS{background-color: aquamarine;padding: 30px 30px; font-size: 30px;}
+#TS a{color: aliceblue}
+#TS a:hover{color: aliceblue; text-decoration-color: #000000;}
+#D{background-color: #FF58E1;padding: 30px 30px;font-size: 30px;}
+#D a{color: aliceblue}
+#D a:hover{color: aliceblue; text-decoration-color: #000000;}
+#GS{background-color: #FF8A2F; padding: 30px 30px;font-size: 30px;}
+#GS a{color: aliceblue}
+#GS a:hover{color: aliceblue; text-decoration-color: #000000;}
+.sec-art{background-image: url(../img/thumb-1920-706196.jpg); background-size: cover;
+    background-repeat: no-repeat;min-height: 600px;
+}
+#sec-art{color: #fff;
+	text-align: center;
+	font-family: Didot, "Didot Bold", "Didot Italic", "DIN-Regular";}
+#sec-art h1{ 
+	color: #FFFFFF;
+	font-size: 60px;
+	padding-top: 400px;
+
+}
+footer{
+	color: #FFFFFF;
+	text-align: center;
+	background-color:azure;
+	padding: 20px 0px;
+}
+footer h5{
+	font-size: 30px;
+}
+.sec-art{opacity: 0.7}
