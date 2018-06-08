@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>All Entertainment</title>
+<title>Contacto</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -14,21 +14,7 @@
 <header>
 <div class="container">
 	     <img src="img/univer.png" class="img-responsive" alt="logotipo universal" width="100px">
-		</div>
-	</header>
-	
-	<section id="sec-intropost">
-	<div class="bg-intropost"> 
-		<div class="container">
-			<img src="img/univer.png" class="img-responsive center-block" width="300">
-			<h1> <strong>¿Dónde puedo conseguirlo?</strong></h1>
-			<p><a href="#" class="btn btn-info btn-universal" id="btn-mas">Leer màs</a></p>
-       </div>
-	</div>
-	</section>
-	<hr>
-	<section id="sec-menu"> 	
-             <nav class="navbar navbar-default">
+	      <nav class="navbar navbar-default">
               <div class="container">
                
                 <div class="navbar-header">
@@ -49,7 +35,7 @@
                         <li class="active"><a href="#">Películas</a></li>
                         <li><a href="#">Música</a></li>
                         <li><a href="#">Pop Colture</a></li>
-					  	  <li><a href="contact.html">Contact</a></li> 
+					  	  <li><a href="#">Contact</a></li> 
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Nosotros <span class="caret"></span></a>
                         	<ul class="dropdown-menu">
                             	<li><a href="#">Acerca de</a></li>
@@ -59,46 +45,119 @@
                   </ul>
                 </div>
               </div>
-            </nav></section>
-<hr>
-	
-	
-	
-<section id="sec-art">
-	<div class="container sec-art">
-		<div class="row">
-			<h1> <strong>Brooklyn Nine-Nine Has Been Saved By Another Network</strong></h1>
+            </nav>
 		</div>
-	</div>		
-</section>
-	    
-	    
-<section id="sec-bajo">
-	<div class="container">
-		<div class="row">
-					
-					<article id="GS" class="col-md-4 col-md-12 col-md-12">
-					<p><a href="#">GAME SHOWS</a></p>
-						</article>
-						
-						<article id="D" class="col-md-4 col-md-12 col-md-12">
-					<p><a href="#">DEPORTE</a></p>
-		 				</article>
-						
-						<article id="TS" class="col-md-4 col-md-12 col-md-12">
-					<p><a href="#">TV SHOWS</a></p>
-						</article>
-						
-						
-				</div>
-			</div>
+		
+<script src="js/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false"></script>
+<script src="js/gmaps.js"></script>
+<script>
+$(function () {
+	
+	$(window).load(function(){
+		mostrarMapa();
+	});
+
+	function mostrarMapa(){
+		var map;
+		var mLat = 14.048399; //latitud
+		var mLng = -87.174078; //longitud
+
+		map = new GMaps({
+			div: '#map', //id del <div> donde se mostrará el mapa.
+			lat: mLat,
+			lng: mLng,
+			zoom: 18
+		  });
+		map.addMarker({
+		  lat: mLat,
+		  lng: mLng,
+		  title: 'Nuestra ubicación en gMaps',
+		  infoWindow: {
+			content: '<p>UNITEC - Univ. Tecnológica de Honduras</p>'
+		  }
+		});	
+		
+	}
+});
+</script>
+	</header>
+		
+		<section id="sec-registro">
+	
+		<div class="container">
+			<h2>Registrate</h2>
 			
-		</section>
+			<div class="row">
+			
+			
+			<form id="form-registro" name="registro" method="post" action="" class="col-md-4">
 		
+				
+				<div class="row">
+				<div class="form-group col-md-6 col-sm-6 col-xs-12">
+					<label>Nombre</label>
+					<input type="text" id="nombre" name="nombre" class="form-control" maxlength="25" required> 
+				</div>
+				
+				<div class="form-group col-md-6 col-sm-6 col-xs-12">
+					<label>Apellido</label>
+					<input type="text" id="apellido" name="apellido" class="form-control" maxlength="25"> 
+				</div>
+					</div>
+				
+				<div class="form-group">
+					<label>Fecha de Nacimiento</label>
+					<input type="date" id="nacimiento" name="nacimiento" class="form-control">
+				</div>
+				
+				<div class="form-group">
+					<label>Correo</label>
+					<input type="email" id="correo" name="correo" class="form-control" maxlength="60" required>
+				</div>
+				
+				<div class="form-group">
+					<label>Nombre de Usuario</label>
+					<input type="email" id="correom" name="correo" class="form-control" maxlength="60" required>
+				</div>
+				
+				<div class="form-group">
+					<label>Contraseña</label>
+					<input type="email" id="correo" name="correo" class="form-control" maxlength="60" required>
+				</div>
+				
+				<div class="form-group">
+					<label>Género</label>
+					
+					<div class="radio">
+						<label>
+							<input type="radio" id="masculino"
+								   name="genero" value="Masculino">
+							Masculino
+						</label>
+							<label>
+							<input type="radio" id="femenino"
+								   name="genero" value="Femenino" checked>
+							Femenino
+						</label>
+					</div> 			
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Registrar</button>
+					
+					<button type="reset" class="btn btn-default">Cancelar</button>
+				</div>
+				
+			</form>
 		
-	
-<footer>
-	
+		</div>
+	</div>
+	</section>
+	<footer>
+	<img src="img/logo codele.png" alt="logo" class="center-block" width="110px">
+	<p>&copy;</p>
 	<section id="sec-info">
 			<div class="container">
 				<div class="row">
@@ -113,7 +172,7 @@
 						<ul>
 							<li> Lorem Ipsum</li>
 							<li> Historia</li>
-							<li><a href="#" >Equipo</a></li>
+							<li> Equipo</li>
 							<li><a href="#"> Forma Parte</a></li>
 						</ul>	
 					</article>
@@ -140,8 +199,6 @@
 				</div>
 			</div>
 		</section>
-		<img src="img/logo codele.png" alt="logo" class="center-block" width="110px">
-	<p>Copyright 2018 – Desarrollado por CODELE&copy;</p>
 </footer>	
 </body>
 </html>
